@@ -2,9 +2,14 @@ package com.hms.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.SequenceGenerator;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -15,15 +20,19 @@ import lombok.ToString;
 @ToString
 public class Appointment {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer appointmentId;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "doctor_id", referencedColumnName = "doctor_id")
 	private Doctor doctor;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "disease_specialization_id", referencedColumnName = "specializationId")
 	private DiseaseSpecialization diseaseSpecialization;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "patient_id", referencedColumnName = "patientId")
 	private Patient patient;
 
 	private LocalDateTime appointmentTime;

@@ -3,6 +3,7 @@ package com.hms.model;
 import java.time.LocalDateTime;
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -41,8 +42,7 @@ public class Doctor {
 	@Column(name = "patient_id")
 	private Patient patient;
 
-	@OneToMany
-	@Column(name = "appointment_id")
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "doctor")
 	private Appointment appointment;
 
 	@OneToMany
