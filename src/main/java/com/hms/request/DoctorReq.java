@@ -17,9 +17,7 @@ public class DoctorReq {
 	private String doctorName;
 
 //	specialization details
-	@Length(min = 5, max = 20)
-	@NotNull
-	private String specializationName;
+	private DiseaseSpecializationReq specialization;
 
 	@Valid
 	private Set<AddressReq> address;

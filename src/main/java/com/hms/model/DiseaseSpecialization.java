@@ -1,5 +1,7 @@
 package com.hms.model;
 
+import com.hms.request.DiseaseSpecializationReq;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

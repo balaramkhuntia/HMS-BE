@@ -3,10 +3,16 @@ package com.hms.request;
 import org.hibernate.validator.constraints.Length;
 
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AddressReq {
+	
+		
 	@Length(max = 20)
 	@NotNull
 	private String street;

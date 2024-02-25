@@ -8,4 +8,6 @@ import com.hms.model.Patient;
 @Repository
 public interface PatientRepo extends JpaRepository<Patient, Integer> {
 
+
+
 }
