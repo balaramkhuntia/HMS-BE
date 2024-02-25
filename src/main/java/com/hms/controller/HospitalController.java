@@ -86,7 +86,6 @@ public class HospitalController {
 //
 //		doctorService.registerDoctor(doctor);
 //	}
-	
 	@PostMapping("/register/doctor")
 
 	public ResponseEntity<String> registerDoctor(@Valid @RequestBody DoctorReq doctorReq){
@@ -95,6 +94,5 @@ public class HospitalController {
 		
 		return new ResponseEntity<>("Doctor saved successfully",HttpStatus.CREATED);
 	}
-	
 
 }

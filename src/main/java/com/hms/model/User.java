@@ -1,7 +1,6 @@
 package com.hms.model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -32,9 +31,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "users_details")
-public class User implements Serializable {
-	private static final long serialVersionUID = -2559559953523497901L;
-
+public class User extends UserBase{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
@@ -44,24 +41,6 @@ public class User implements Serializable {
 	
 //	@Column(nullable = false, unique = true)
 //	private String username;
-	
-	@Column(name = "first_name", length = 15)
-	private String firstName;
-	
-	@Column(name = "last_name", length = 15)
-	private String lastName;
-	
-	@Column(name = "email", nullable = false, unique = true)
-	private String email;
-	
-	@Column(name = "password", nullable = false)
-	private String password;
-	
-	@Column(name = "date_of_birth")
-	private LocalDate dateOfBirth;
-	
-	@Column(name = "mobile_number")
-	private Long mobile;
 	
 //	@OneToOne(cascade = CascadeType.ALL)
 //	@JoinColumn(name = "address_id", referencedColumnName = "address_id")

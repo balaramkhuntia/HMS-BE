@@ -1,7 +1,6 @@
 package com.hms.request;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Set;
 
 import org.hibernate.validator.constraints.Length;
@@ -18,6 +17,10 @@ public class DoctorReq {
 
 //	specialization details
 	private DiseaseSpecializationReq specialization;
+
+	@Length(min = 5, max = 20)
+	@NotNull
+	private String specializationName;
 
 	@Valid
 	private Set<AddressReq> address;

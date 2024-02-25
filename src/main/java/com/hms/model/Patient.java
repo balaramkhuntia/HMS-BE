@@ -15,15 +15,14 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Patient {
+public class Patient extends UserBase {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "patient_id")
 	private Integer patientId;
 
-	private String patientName;
-
-	@OneToMany
-	private Doctor doctor;
+//	@OneToMany
+//	private Doctor doctor;
 
 	@OneToOne
 	private Address address;

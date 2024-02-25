@@ -11,22 +11,21 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Department {
+public class Department extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "department_id")
-    private Long departmentId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "department_id")
+	private Long departmentId;
 
-    @Column(name = "department_name")
-    private String departmentName;
+	@Column(name = "department_name")
+	private String departmentName;
 
-    @ManyToOne
-    @JoinColumn(name = "hospital_id")
-    private Hospital hospital;
+	@ManyToOne
+	@JoinColumn(name = "hospital_id")
+	private Hospital hospital;
 
-    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
-    private Set<Doctor> doctors;
+	@OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
+	private Set<Doctor> doctors;
 
 }
-

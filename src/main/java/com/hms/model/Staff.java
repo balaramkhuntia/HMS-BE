@@ -9,19 +9,18 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Staff {
+public class Staff extends UserBase {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "staff_id")
-    private Long staffId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "staff_id")
+	private Long staffId;
 
-    @Column(name = "staff_name")
-    private String staffName;
+	@Column(name = "staff_name")
+	private String staffName;
 
-    @ManyToOne
-    @JoinColumn(name = "department_id")
-    private Department department;
+	@ManyToOne
+	@JoinColumn(name = "department_id")
+	private Department department;
 
 }
-
