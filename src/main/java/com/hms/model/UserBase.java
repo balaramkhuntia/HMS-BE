@@ -44,10 +44,6 @@ public class UserBase {
 	@Column(name = "mobile_number", length = 20)
 	private String mobile;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "address_id", referencedColumnName = "address_id")
-	private Address address;
-	
     @CreatedDate
     @Column(updatable = false)
     private LocalDateTime createdAt;

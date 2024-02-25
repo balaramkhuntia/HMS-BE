@@ -1,7 +1,5 @@
 package com.hms.model;
 
-import com.hms.request.DiseaseSpecializationReq;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,15 +15,18 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class DiseaseSpecialization {
+public class Disease {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "specialization_id")
-	private Integer specializationId;
+	@Column(name = "disease_id")
+	private Integer diseaseId;
 
-	@Column(name = "specialization_name")
-	private String specializationName;
+	@Column(name = "disease_name")
+	private String diseaseName;
 	
-	@OneToOne(cascade = CascadeType.ALL, mappedBy = "diseaseSpecialization")
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "disease")
 	private Appointment appointment;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Doctor doctor;
 }

@@ -17,7 +17,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Appointment {
+public class Appointment extends BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer appointmentId;
@@ -27,8 +27,8 @@ public class Appointment {
 	private Doctor doctor;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "disease_specialization_id", referencedColumnName = "specialization_id")
-	private DiseaseSpecialization diseaseSpecialization;
+	@JoinColumn(name = "disease_id", referencedColumnName = "disease_id")
+	private Disease disease;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "patient_id", referencedColumnName = "patientId")

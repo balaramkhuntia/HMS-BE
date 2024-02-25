@@ -1,5 +1,7 @@
 package com.hms.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,16 +26,13 @@ public class Patient extends UserBase {
 //	@OneToMany
 //	private Doctor doctor;
 
-	@OneToOne
-	private Address address;
+
 
 	@OneToMany
-	private DiseaseSpecialization diseaseSpecialization;
+	private List<Disease> disease;
 
 	@OneToOne
 	private Appointment appointment;
 
-	@OneToOne
-	@Column(name = "contact_details_id")
-	private ContactDetails contactDetails;
+
 }

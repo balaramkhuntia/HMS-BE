@@ -31,8 +31,5 @@ public class DoctorReq {
 //	Date Of Birth
 	private LocalDateTime dob;
 
-//	Contact Details
-	@Valid
-	private Set<ContactDetailsReq> contactDetailsReqs;
 
 }

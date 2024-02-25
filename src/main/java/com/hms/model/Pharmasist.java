@@ -17,13 +17,9 @@ public class Pharmasist {
 	@Id
 	private Integer pharmasistId;
 
-	@OneToOne
-	private Address address;
+	
 
-	@OneToMany
-	private WorkExperience experience;
+	
 
-	@OneToOne
-	@Column(name = "contact_details_id")
-	private ContactDetails contactDetails;
+	
 }

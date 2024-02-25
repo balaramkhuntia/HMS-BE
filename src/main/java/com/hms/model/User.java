@@ -19,6 +19,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -61,9 +62,16 @@ public class User extends UserBase{
 	)
 	private Set<Role> roles;
 	
+	
+//	@OneToOne(cascade = CascadeType.ALL)
+//	private Address address;
+	
 	@CreationTimestamp
 	private LocalDateTime createdDateTime;
 	
 	@UpdateTimestamp
 	private LocalDateTime updatedDateTime;
+	
+	@Column(name = "address_id")
+	private Long addressId;
 }

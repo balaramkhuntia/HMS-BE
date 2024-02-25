@@ -17,7 +17,7 @@ public class AppointmentRes {
 
 	private DoctorRes doctorRes;
 	
-	private DiseaseSpecializationRes diseaseSpecializationRes;
+	private DiseaseRes diseaseRes;
 
 	private PatientRes patientRes;
 	

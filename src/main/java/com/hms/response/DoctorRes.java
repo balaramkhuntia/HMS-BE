@@ -3,6 +3,8 @@ package com.hms.response;
 import java.time.LocalDateTime;
 import java.util.Set;
 
+import com.hms.model.Disease;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +26,7 @@ public class DoctorRes {
 	
 	private LocalDateTime dob;
 
-	private DiseaseSpecializationRes diseaseSpecializationRes;
+	private DiseaseRes diseaseRes;
 
 	private Set<AddressRes> addresses;
 
@@ -36,6 +38,5 @@ public class DoctorRes {
 	private Set<WorkExperienceRes> experiences;
 
 	
-	private Set<ContactDetailsRes> contactDetails;
 	
 }

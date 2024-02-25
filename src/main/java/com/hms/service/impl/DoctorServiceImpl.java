@@ -1,9 +1,9 @@
 package com.hms.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
-import com.hms.model.DiseaseSpecialization;
 import com.hms.model.Doctor;
 import com.hms.repository.DoctorRepo;
 import com.hms.request.DoctorReq;

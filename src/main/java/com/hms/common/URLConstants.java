@@ -1,30 +1,20 @@
 package com.hms.common;
 
 public class URLConstants {
-	
-	public static class Auth{
+
+	public static class Auth {
 		public static final String BASE_API = "/api/auth";
 		public static final String LOGIN = "/login";
 		public static final String SIGNUP = "/signup";
 		public static final String ROLES = "/roles";
-		
+
 	}
-	
-	public static class Address{
+
+	public static class Address {
 		public static final String BASE_API = "/api/address";
 		public static final String SAVE = "/save";
 		public static final String ACTIVE_CITIES = "/all/active";
 		public static final String ALL_LOCATIONS = "/all/locations";
-		
-	}
 
-	public static class Ground{
-		public static final String BASE_API = "/api/ground";
-		public static final String SAVE = "/save";
-		public static final String UPDATE = "/update";
-		public static final String GET_BY_CITY_NAME = "/get/by/cityname/{cityName}";
-		public static final String GET_BY_GROUND_NAME = "/get/by/groundname/{groundName}";
-//		public static final String GET = "/get";
-		public static final String GET_ALL = "/get/all";
 	}
 }

@@ -19,6 +19,7 @@ public class Admin extends UserBase {
 	@Column(name = "admin_id")
 	private Integer adminId;
 	
-	private Address address;
+	
+	
 
 }

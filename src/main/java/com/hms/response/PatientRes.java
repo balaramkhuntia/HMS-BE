@@ -17,11 +17,11 @@ public class PatientRes {
 	
 	private AddressRes addressRes;
 	
-	private DiseaseSpecializationRes diseaseSpecializationRes;
+	private DiseaseRes diseaseRes;
 	
 	private AppointmentRes appointmentRes;
 	
-	private ContactDetailsRes contactDetailsRes;
+
 
 
 
