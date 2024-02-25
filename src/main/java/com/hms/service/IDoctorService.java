@@ -1,11 +1,10 @@
 package com.hms.service;
 
-import org.springframework.http.ResponseEntity;
-
-import com.hms.model.Doctor;
+import com.hms.request.DoctorReq;
+import com.hms.response.DoctorRes;
 
 public interface IDoctorService {
 
-	ResponseEntity<String> registerDoctor(Doctor doctor);
+ DoctorRes registerDoctor(DoctorReq doctorReq);
 
 }
